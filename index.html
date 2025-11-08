@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>세대 융합 시너지 - 세대 갈등을 성과로 전환하다</title>
+    <title>G-Link-Project | 지역 산업 산학 협력 퍼실리테이터</title>
     <style>
         * {
             margin: 0;
@@ -12,561 +12,400 @@
         }
 
         body {
-            font-family: 'Noto Sans KR', 'Pretendard', -apple-system, sans-serif;
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
             color: #333;
             line-height: 1.6;
-            overflow-x: hidden;
         }
 
         /* Header */
         header {
             background: #0A1931;
-            padding: 1.2rem 5%;
-            position: fixed;
-            width: 100%;
+            padding: 1rem 2rem;
+            position: sticky;
             top: 0;
             z-index: 1000;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
 
-        .header-content {
+        nav {
             max-width: 1200px;
             margin: 0 auto;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            flex-wrap: wrap;
         }
 
         .logo {
+            color: #1DE9B6;
             font-size: 1.5rem;
             font-weight: bold;
-            color: #fff;
         }
 
-        .logo span {
-            color: #1DE9B6;
-        }
-
-        nav {
+        .nav-links {
             display: flex;
             gap: 2rem;
+            flex-wrap: wrap;
         }
 
-        nav a {
+        .nav-links a {
             color: #fff;
             text-decoration: none;
-            font-weight: 500;
             transition: color 0.3s;
-            font-size: 0.95rem;
         }
 
-        nav a:hover {
+        .nav-links a:hover {
             color: #1DE9B6;
         }
 
-        .mobile-menu {
-            display: none;
-            color: white;
-            font-size: 1.5rem;
-            cursor: pointer;
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 0.5rem;
+        }
+
+        .social-links a {
+            color: #1DE9B6;
+            font-size: 1.2rem;
+            text-decoration: none;
         }
 
         /* Hero Section */
         .hero {
-            background: linear-gradient(135deg, #0A1931 0%, #1a3a5c 100%);
+            background: linear-gradient(135deg, #0A1931 0%, #1a3a52 100%);
             color: white;
-            padding: 140px 5% 80px;
+            padding: 5rem 2rem;
             text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            right: -20%;
-            width: 600px;
-            height: 600px;
-            background: radial-gradient(circle, rgba(29,233,182,0.1) 0%, transparent 70%);
-            border-radius: 50%;
-            animation: pulse 8s ease-in-out infinite;
-        }
-
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); opacity: 0.5; }
-            50% { transform: scale(1.1); opacity: 0.8; }
         }
 
         .hero-content {
             max-width: 900px;
             margin: 0 auto;
-            position: relative;
-            z-index: 1;
         }
 
         .hero h1 {
-            font-size: 2.8rem;
+            font-size: 2.5rem;
             margin-bottom: 1.5rem;
             line-height: 1.3;
-            font-weight: bold;
-            animation: fadeInUp 0.8s ease-out;
         }
 
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .hero h1 .highlight {
+        .hero h1 span {
             color: #1DE9B6;
-            border-bottom: 3px solid #1DE9B6;
-            padding-bottom: 2px;
+            display: block;
+            margin-top: 0.5rem;
         }
 
-        .hero h2 {
-            font-size: 1.4rem;
+        .hero p {
+            font-size: 1.2rem;
             margin-bottom: 2rem;
-            font-weight: 400;
             opacity: 0.95;
-            line-height: 1.7;
-            animation: fadeInUp 0.8s ease-out 0.2s both;
         }
 
-        .hero-image {
-            margin: 2.5rem 0;
-            padding: 2rem;
-            background: rgba(255,255,255,0.05);
-            border-radius: 15px;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(29,233,182,0.2);
-            animation: fadeInUp 0.8s ease-out 0.4s both;
-        }
-
-        .hero-image p {
-            font-size: 1rem;
-            opacity: 0.85;
-            font-style: italic;
-        }
-
-        .cta-button {
-            display: inline-block;
+        .cta-primary {
             background: #1DE9B6;
             color: #0A1931;
-            padding: 1.2rem 3rem;
-            font-size: 1.2rem;
-            font-weight: bold;
-            border-radius: 50px;
-            text-decoration: none;
-            transition: all 0.3s;
-            box-shadow: 0 5px 20px rgba(29,233,182,0.3);
-            animation: fadeInUp 0.8s ease-out 0.6s both;
-        }
-
-        .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 30px rgba(29,233,182,0.5);
-            background: #19d4a3;
-        }
-
-        /* Section Styles */
-        section {
-            padding: 80px 5%;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .section-title {
-            font-size: 2.2rem;
-            text-align: center;
-            margin-bottom: 3rem;
-            color: #0A1931;
-            font-weight: bold;
-        }
-
-        /* Pain Points */
-        .pain-points {
-            background: #F5F5F5;
-        }
-
-        .checklist {
-            max-width: 800px;
-            margin: 2rem auto;
-            background: white;
-            padding: 2.5rem;
-            border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-        }
-
-        .checklist-item {
-            display: flex;
-            align-items: flex-start;
-            margin-bottom: 1.5rem;
-            padding: 1.2rem;
-            border-left: 4px solid #1DE9B6;
-            background: #f9f9f9;
-            border-radius: 5px;
-            transition: all 0.3s;
-        }
-
-        .checklist-item:hover {
-            background: #f0f9f7;
-            transform: translateX(5px);
-        }
-
-        .checklist-item::before {
-            content: '✓';
-            color: #1DE9B6;
-            font-size: 1.5rem;
-            font-weight: bold;
-            margin-right: 1rem;
-            flex-shrink: 0;
-        }
-
-        .pain-message {
-            text-align: center;
-            font-size: 1.2rem;
-            color: #0A1931;
-            font-weight: 600;
-            margin-top: 2rem;
-            padding: 1.5rem;
-            background: white;
-            border-radius: 10px;
-            line-height: 1.8;
-        }
-
-        /* Solution Section */
-        .solution {
-            background: white;
-        }
-
-        .solution-intro {
-            text-align: center;
-            max-width: 800px;
-            margin: 0 auto 3rem;
+            padding: 1.2rem 2.5rem;
             font-size: 1.1rem;
-            line-height: 1.8;
-        }
-
-        .solution-intro strong {
-            color: #1DE9B6;
-            font-size: 1.3rem;
-        }
-
-        .process-steps {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .step {
-            background: #F5F5F5;
-            padding: 2rem;
-            border-radius: 15px;
-            transition: all 0.3s;
-            border-top: 5px solid #1DE9B6;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .step::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, transparent 0%, rgba(29,233,182,0.05) 100%);
-            opacity: 0;
-            transition: opacity 0.3s;
-        }
-
-        .step:hover::before {
-            opacity: 1;
-        }
-
-        .step:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(29,233,182,0.2);
-        }
-
-        .step-number {
-            font-size: 2rem;
-            color: #1DE9B6;
             font-weight: bold;
-            margin-bottom: 1rem;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: transform 0.3s, box-shadow 0.3s;
+            margin: 0.5rem;
         }
 
-        .step h3 {
-            font-size: 1.4rem;
-            color: #0A1931;
-            margin-bottom: 1rem;
-        }
-
-        .step p {
-            line-height: 1.7;
-            color: #555;
-        }
-
-        /* Benefits */
-        .benefits {
-            background: linear-gradient(135deg, #0A1931 0%, #1a3a5c 100%);
-            color: white;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .benefits::after {
-            content: '';
-            position: absolute;
-            bottom: -50%;
-            left: -20%;
-            width: 600px;
-            height: 600px;
-            background: radial-gradient(circle, rgba(29,233,182,0.1) 0%, transparent 70%);
-            border-radius: 50%;
-        }
-
-        .benefits .section-title {
-            color: white;
-            position: relative;
-            z-index: 1;
-        }
-
-        .benefits-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-            position: relative;
-            z-index: 1;
-        }
-
-        .benefit-card {
-            background: rgba(255,255,255,0.1);
-            padding: 2.5rem;
-            border-radius: 15px;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(29,233,182,0.3);
-            transition: all 0.3s;
-        }
-
-        .benefit-card:hover {
-            background: rgba(255,255,255,0.15);
-            border-color: #1DE9B6;
-            transform: translateY(-5px);
-        }
-
-        .benefit-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-
-        .benefit-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            color: #1DE9B6;
-        }
-
-        .benefit-card p {
-            line-height: 1.7;
-            opacity: 0.9;
-        }
-
-        /* Success Stories */
-        .success-stories {
-            background: #F5F5F5;
-        }
-
-        .stories-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .story-card {
-            background: white;
-            padding: 2.5rem;
-            border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-            border-left: 5px solid #1DE9B6;
-            transition: all 0.3s;
-        }
-
-        .story-card:hover {
-            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+        .cta-primary:hover {
             transform: translateY(-3px);
-        }
-
-        .story-card h3 {
-            color: #0A1931;
-            font-size: 1.3rem;
-            margin-bottom: 1.5rem;
-            font-weight: bold;
-        }
-
-        .story-card p {
-            line-height: 1.8;
-            color: #555;
-            margin-bottom: 0.8rem;
-        }
-
-        .story-card p strong {
-            color: #1DE9B6;
+            box-shadow: 0 10px 25px rgba(29, 233, 182, 0.4);
         }
 
         .cta-secondary {
-            display: inline-block;
             background: transparent;
             color: #1DE9B6;
-            padding: 1rem 2rem;
+            padding: 1.2rem 2.5rem;
+            font-size: 1.1rem;
+            font-weight: bold;
             border: 2px solid #1DE9B6;
             border-radius: 50px;
+            cursor: pointer;
             text-decoration: none;
-            font-weight: bold;
+            display: inline-block;
             transition: all 0.3s;
-            margin-top: 2rem;
+            margin: 0.5rem;
         }
 
         .cta-secondary:hover {
             background: #1DE9B6;
             color: #0A1931;
-            transform: translateY(-2px);
         }
 
-        /* Final CTA */
-        .final-cta {
-            background: white;
-            text-align: center;
-            padding: 100px 5%;
+        /* Section Styles */
+        section {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
-        .final-cta h2 {
-            font-size: 2.5rem;
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
             color: #0A1931;
-            margin-bottom: 1.5rem;
-            line-height: 1.4;
+            text-align: center;
         }
 
-        .final-cta p {
-            font-size: 1.2rem;
-            color: #555;
-            max-width: 700px;
-            margin: 0 auto 2.5rem;
-            line-height: 1.8;
+        /* Pain Points */
+        .pain-points {
+            background: #f8f9fa;
+        }
+
+        .checklist {
+            max-width: 800px;
+            margin: 2rem auto;
+        }
+
+        .checklist-item {
+            background: white;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .checklist-item::before {
+            content: "❌";
+            font-size: 1.5rem;
+        }
+
+        /* Solution */
+        .solution {
+            background: white;
+        }
+
+        .solution-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .solution-card {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 15px;
+            border-left: 4px solid #1DE9B6;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .solution-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .solution-card h3 {
+            color: #0A1931;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        /* Process Steps */
+        .process-steps {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .step {
+            flex: 1;
+            min-width: 250px;
+            text-align: center;
+            padding: 2rem;
+            background: #f8f9fa;
+            border-radius: 15px;
+            position: relative;
+        }
+
+        .step-number {
+            background: #1DE9B6;
+            color: #0A1931;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 0 auto 1rem;
+        }
+
+        /* Outcomes */
+        .outcomes {
+            background: #f8f9fa;
+        }
+
+        .outcome-list {
+            max-width: 900px;
+            margin: 2rem auto;
+        }
+
+        .outcome-item {
+            background: white;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+            border-radius: 15px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+            display: flex;
+            align-items: flex-start;
+            gap: 1.5rem;
+        }
+
+        .outcome-icon {
+            font-size: 2.5rem;
+            flex-shrink: 0;
+        }
+
+        /* Case Studies */
+        .case-studies {
+            background: white;
+        }
+
+        .case-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .case-card {
+            background: linear-gradient(135deg, #0A1931 0%, #1a3a52 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 15px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .case-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100px;
+            height: 100px;
+            background: #1DE9B6;
+            opacity: 0.1;
+            border-radius: 50%;
+            transform: translate(30%, -30%);
+        }
+
+        .case-card h3 {
+            color: #1DE9B6;
+            margin-bottom: 1rem;
+        }
+
+        .case-result {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #1DE9B6;
+            margin: 1rem 0;
+        }
+
+        /* Beta Section */
+        .beta {
+            background: linear-gradient(135deg, #1DE9B6 0%, #00c9a7 100%);
+            color: #0A1931;
+            text-align: center;
+            padding: 4rem 2rem;
+        }
+
+        .beta h2 {
+            color: #0A1931;
+            font-size: 2.5rem;
+        }
+
+        .beta-highlight {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 2rem;
+            border-radius: 15px;
+            max-width: 800px;
+            margin: 2rem auto;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .beta-highlight h3 {
+            color: #0A1931;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .badge {
+            background: #0A1931;
+            color: #1DE9B6;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            display: inline-block;
+            margin: 0.5rem;
+            font-weight: bold;
         }
 
         /* Footer */
         footer {
             background: #0A1931;
             color: white;
-            padding: 3rem 5%;
+            padding: 3rem 2rem;
+            text-align: center;
         }
 
         .footer-content {
             max-width: 1200px;
             margin: 0 auto;
-            text-align: center;
         }
 
-        .footer-content h3 {
-            color: #1DE9B6;
-            margin-bottom: 1.5rem;
-            font-size: 1.5rem;
+        .footer-info {
+            margin-bottom: 2rem;
         }
 
-        .contact-info {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
+        .footer-info p {
+            margin: 0.5rem 0;
+        }
+
+        .footer-social {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
             margin: 2rem 0;
-            text-align: left;
         }
 
-        .contact-item {
-            opacity: 0.9;
-            padding: 1rem;
-            background: rgba(29,233,182,0.05);
-            border-radius: 8px;
-            border-left: 3px solid #1DE9B6;
-        }
-
-        .contact-item strong {
+        .footer-social a {
             color: #1DE9B6;
-            display: block;
-            margin-bottom: 0.5rem;
-        }
-
-        .social-links {
-            margin-top: 2rem;
-            padding-top: 2rem;
-            border-top: 1px solid rgba(255,255,255,0.1);
-        }
-
-        .social-links a {
-            color: #1DE9B6;
+            font-size: 1.5rem;
             text-decoration: none;
-            margin: 0 1rem;
-            transition: opacity 0.3s;
-            font-weight: 500;
+            transition: transform 0.3s;
         }
 
-        .social-links a:hover {
-            opacity: 0.7;
+        .footer-social a:hover {
+            transform: scale(1.2);
         }
 
-        .copyright {
-            margin-top: 2rem;
-            opacity: 0.7;
-            font-size: 0.9rem;
-        }
-
-        /* Mobile Responsive */
+        /* Responsive */
         @media (max-width: 768px) {
-            nav {
-                display: none;
-            }
-
-            .mobile-menu {
-                display: block;
-            }
-
             .hero h1 {
-                font-size: 2rem;
-            }
-
-            .hero h2 {
-                font-size: 1.1rem;
-            }
-
-            .section-title {
                 font-size: 1.8rem;
             }
 
-            .process-steps,
-            .benefits-grid,
-            .stories-grid {
-                grid-template-columns: 1fr;
+            .nav-links {
+                display: none;
             }
 
-            section {
-                padding: 50px 5%;
-            }
-
-            .final-cta h2 {
-                font-size: 2rem;
-            }
-
-            .contact-info {
-                grid-template-columns: 1fr;
+            .process-steps {
+                flex-direction: column;
             }
         }
     </style>
@@ -574,211 +413,199 @@
 <body>
     <!-- Header -->
     <header>
-        <div class="header-content">
-            <div class="logo">세대 융합 <span>시너지</span></div>
-            <nav>
-                <a href="#solution">서비스 소개</a>
+        <nav>
+            <div class="logo">G-Link-Project</div>
+            <div class="nav-links">
+                <a href="#about">서비스 소개</a>
                 <a href="#pain">문제점 진단</a>
-                <a href="#success">성공 사례</a>
+                <a href="#cases">성공 사례</a>
+                <a href="#program">프로그램 구성</a>
                 <a href="#contact">문의하기</a>
-            </nav>
-            <div class="mobile-menu">☰</div>
-        </div>
+            </div>
+            <div class="social-links">
+                <a href="https://www.instagram.com/" target="_blank">📸</a>
+                <a href="https://www.youtube.com/" target="_blank">▶️</a>
+                <a href="https://pf.kakao.com/" target="_blank">💬</a>
+            </div>
+        </nav>
     </header>
 
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
-            <h1>우리 회사의 세대 갈등,<br>단순한 불만이 아닌 <span class="highlight">'성과 저해 요소'</span>입니다.</h1>
-            <h2>경남 지역 산업 특화, 세대 융합 기반 직무 프로젝트<br>
-            MZ세대의 활력과 기성세대의 노하우를 실제 현장 문제 해결로 연결합니다.</h2>
-            <div class="hero-image">
-                <p>💡 대학생과 기업 직원이 공정 현장에서 함께 토론하고 전략을 구상하는 모습</p>
-            </div>
-            <a href="#contact" class="cta-button">🚀 30분 무료 진단 컨설팅 신청하기</a>
+            <h1>
+                귀사의 세대 갈등, 단순한 불만이 아닌
+                <span>'잠재된 성과 저해 요소'입니다.</span>
+            </h1>
+            <p>
+                MZ세대 활력과 기성세대 노하우를 <strong>'직무 기반 프로젝트'</strong>로 연결하여<br>
+                실제 문제 해결과 협업 역량을 강화하는 G-PjBL 솔루션
+            </p>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSd0FB2TRwAk0RHLJoFGBimL0emCjty9i6R-a-j_5O5LaCpPUw/viewform?usp=dialog" target="_blank" class="cta-primary">🚀 30분 무료 진단 컨설팅 신청하기 (선착순 3개 기업)</a>
+            <a href="https://pf.kakao.com/" target="_blank" class="cta-secondary">💬 카카오톡 1:1 실시간 상담</a>
         </div>
     </section>
 
-    <!-- Pain Points Section -->
-    <section class="pain-points" id="pain">
-        <h2 class="section-title">혹시 귀사의 현상황은 이러하지 않습니까?</h2>
+    <!-- Pain Points -->
+    <section id="pain" class="pain-points">
+        <h2>혹시 귀사의 상황은 이러하지 않습니까?</h2>
         <div class="checklist">
             <div class="checklist-item">
-                세대 간 소통 방식 차이로 업무 효율이 떨어집니다.
+                <div>
+                    <strong>소통 방식 차이로 업무 효율 저하</strong>
+                    <p>대면 vs 메신저, 보고 vs 공유... 세대 간 다른 소통 방식이 프로젝트 진행을 지연시킵니다.</p>
+                </div>
             </div>
             <div class="checklist-item">
-                신입 인력 교육에 과도한 시간과 비용이 듭니다.
+                <div>
+                    <strong>신입 인력 교육 비용 과다</strong>
+                    <p>체계적인 교육 시스템 없이 OJT에만 의존하다 보니 교육 기간이 길어지고 비용만 증가합니다.</p>
+                </div>
             </div>
             <div class="checklist-item">
-                기존 직원의 리더십이 MZ세대에게 효과적으로 전달되지 않습니다.
+                <div>
+                    <strong>기존 리더십 전달 비효율</strong>
+                    <p>기성세대의 풍부한 노하우가 체계적으로 전수되지 못하고 암묵지로만 남아있습니다.</p>
+                </div>
             </div>
-            <div class="checklist-item">
-                세대 갈등으로 회의와 협업이 소극적으로 변했습니다.
-            </div>
-        </div>
-        <div class="pain-message">
-            이런 문제는 단순한 '교육'으로는 해결되지 않습니다.<br>
-            <strong>협력 구조의 전환</strong>, 그것이 진짜 해답입니다.
         </div>
     </section>
 
-    <!-- Solution Section -->
-    <section class="solution" id="solution">
-        <h2 class="section-title">전문 퍼실리테이터가 리드하는<br>세대 융합 프로젝트만이 해답입니다.</h2>
-        <div class="solution-intro">
-            <p><strong>G-LinK Project (Generational Link Project)</strong>는<br>
-            기업의 실제 현안을 중심으로 세대 간 협업을 유도하는<br>
-            문제 해결형 맞춤 컨설팅 프로그램입니다.</p>
-        </div>
+    <!-- Solution -->
+    <section id="about" class="solution">
+        <h2>전문 퍼실리테이터가 리드하는<br>세대 융합 프로젝트만이 해답입니다</h2>
         
+        <div class="solution-grid">
+            <div class="solution-card">
+                <h3>🏭 생산 효율화</h3>
+                <p><strong>'가동 중지 시간' 분석 및 IoT 기반 모니터링 PoC</strong></p>
+                <p>현장 데이터를 실시간으로 수집하고 분석하여 생산성을 극대화합니다. MZ세대의 디지털 감각과 기성세대의 현장 경험이 만나 최적의 솔루션을 도출합니다.</p>
+            </div>
+            
+            <div class="solution-card">
+                <h3>📱 디지털 전환 (DX)</h3>
+                <p><strong>기존 작업 매뉴얼을 모바일 인터랙티브 매뉴얼로 전환 기획</strong></p>
+                <p>종이로 된 복잡한 매뉴얼을 누구나 쉽게 접근 가능한 디지털 콘텐츠로 전환합니다. 세대 간 협업으로 실용적이면서도 현대적인 매뉴얼을 완성합니다.</p>
+            </div>
+            
+            <div class="solution-card">
+                <h3>🤝 협업 문화 구축</h3>
+                <p><strong>퍼실리테이터 주도의 구조화된 프로젝트 수행</strong></p>
+                <p>전문 퍼실리테이터가 세대 간 소통을 중재하고, 각자의 강점을 최대한 활용할 수 있도록 프로젝트를 설계하고 리드합니다.</p>
+            </div>
+        </div>
+
+        <h3 style="text-align: center; margin-top: 4rem; margin-bottom: 2rem; color: #0A1931;">3단계 실행 구조</h3>
         <div class="process-steps">
             <div class="step">
-                <div class="step-number">1️⃣</div>
-                <h3>문제 정의 및 팀 빌딩</h3>
-                <p>기업의 실제 직무 과제를 프로젝트 주제로 설정하고, 기업 직원(멘토)과 대학생(실무진)이 하이브리드 팀으로 구성됩니다.</p>
+                <div class="step-number">1</div>
+                <h3>문제 정의</h3>
+                <p>현장의 실질적인 문제를 세대 간 관점에서 다각도로 분석하고 명확히 정의합니다.</p>
             </div>
             <div class="step">
-                <div class="step-number">2️⃣</div>
+                <div class="step-number">2</div>
                 <h3>협력 프로젝트 수행</h3>
-                <p>전문 산학 퍼실리테이터가 팀 진행을 리드하며, 세대 간 사고방식 차이를 중재하고 협업 기반의 실질적 커뮤니케이션 환경을 조성합니다.</p>
+                <p>퍼실리테이터의 중재로 세대 간 협업 프로젝트를 진행하며 실질적인 솔루션을 개발합니다.</p>
             </div>
             <div class="step">
-                <div class="step-number">3️⃣</div>
+                <div class="step-number">3</div>
                 <h3>성과 도출 및 리포팅</h3>
-                <p>프로젝트 결과물을 통해 현장 문제의 구체적 솔루션을 제시하고, 기업 내 세대 융합 리더십 가이드를 제공합니다.</p>
+                <p>프로젝트 결과를 체계적으로 정리하고, 향후 적용 방안을 제시합니다.</p>
             </div>
         </div>
     </section>
 
-    <!-- Benefits Section -->
-    <section class="benefits">
-        <h2 class="section-title">세대 갈등을 넘어,<br>당장 성과로 이어지는 3가지 변화</h2>
-        <div class="benefits-grid">
-            <div class="benefit-card">
-                <div class="benefit-icon">✅</div>
-                <h3>즉각적인 문제 해결</h3>
-                <p>프로젝트 결과물이 실제 업무 개선안으로 이어집니다. 현장의 실질적인 과제를 해결하며 즉시 적용 가능한 솔루션을 도출합니다.</p>
+    <!-- Expected Outcomes -->
+    <section class="outcomes">
+        <h2>세대 갈등을 넘어, 성과로 이어지는 세 가지 변화</h2>
+        <div class="outcome-list">
+            <div class="outcome-item">
+                <div class="outcome-icon">✅</div>
+                <div>
+                    <h3>즉각적인 문제 해결</h3>
+                    <p>팀 프로젝트를 통한 실질적인 현안 개선책 도출. 이론이 아닌 현장에서 바로 적용 가능한 솔루션을 만듭니다.</p>
+                </div>
             </div>
-            <div class="benefit-card">
-                <div class="benefit-icon">🤝</div>
-                <h3>직장 문화 혁신</h3>
-                <p>MZ세대와 기성세대 간 이해 증진, 리더십 재정립. 세대 간 벽을 허물고 상호 존중의 협업 문화를 구축합니다.</p>
+            <div class="outcome-item">
+                <div class="outcome-icon">🤝</div>
+                <div>
+                    <h3>직장 문화 혁신</h3>
+                    <p>세대 간 소통 개선 및 리더십 재정립. 프로젝트를 통해 자연스럽게 형성되는 상호 이해와 존중의 문화.</p>
+                </div>
             </div>
-            <div class="benefit-card">
-                <div class="benefit-icon">🎓</div>
-                <h3>인재 선점 및 검증</h3>
-                <p>학생은 실무 역량을, 기업은 검증된 인재를 확보. 채용 전 실무 적합성을 평가하고 지역 우수 인재를 조기 확보합니다.</p>
+            <div class="outcome-item">
+                <div class="outcome-icon">🎓</div>
+                <div>
+                    <h3>인재 선점 및 검증</h3>
+                    <p>우수 인재를 채용 전에 검증하고 확보. 산학 협력을 통해 우리 회사에 맞는 인재를 미리 발굴합니다.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Success Stories -->
-    <section class="success-stories" id="success">
-        <h2 class="section-title">실제 기업이 경험한 변화입니다.</h2>
-        <div class="stories-grid">
-            <div class="story-card">
-                <h3>A 중소기업</h3>
-                <p><strong>📈 생산성 10% 향상</strong> - 4주간의 G-LinK Project 이후</p>
-                <p><strong>📉 불량률 7% 감소</strong></p>
-                <p>💬 "세대 간 소통이 원활해지면서 업무 프로세스 자체가 개선되었습니다. 예상보다 빠르게 가시적인 성과가 나타났습니다."</p>
+    <!-- Case Studies -->
+    <section id="cases" class="case-studies">
+        <h2>검증된 성공 사례</h2>
+        <div class="case-grid">
+            <div class="case-card">
+                <h3>A 정밀 부품사</h3>
+                <div class="case-result">생산성 12% 향상</div>
+                <p>소통 방식이 '감'에서 '데이터 기반'으로 전환되면서 의사결정 속도가 빨라지고, 불필요한 재작업이 감소했습니다.</p>
+                <p style="margin-top: 1rem; font-style: italic;">"세대 간 언어가 달랐던 것이 가장 큰 문제였는데, 프로젝트를 통해 공통의 언어를 찾았습니다."</p>
             </div>
-            <div class="story-card">
-                <h3>B 중견기업</h3>
-                <p><strong>😊 소통 만족도 85% 상승</strong></p>
-                <p><strong>🎯 내부 교육 프로그램 확장</strong> - 리더십 교육으로 적용</p>
-                <p>💬 "처음에는 반신반의했지만, 이제는 우리 회사의 핵심 문화 전략이 되었습니다. 세대 간 협력이 경쟁력이라는 것을 실감했습니다."</p>
+            <div class="case-card">
+                <h3>B 산업 기계 제조사</h3>
+                <div class="case-result">교육 기간 30% 단축</div>
+                <p>신입 인력 업무 숙련도 도달 기간이 대폭 단축되고, 체계적인 디지털 매뉴얼로 교육 시간이 절감되었습니다.</p>
+                <p style="margin-top: 1rem; font-style: italic;">"베테랑의 노하우를 젊은 세대가 디지털화하니 모두에게 유용한 자산이 되었습니다."</p>
             </div>
         </div>
-        <div style="text-align: center;">
-            <a href="#contact" class="cta-secondary">📂 성공 사례 포트폴리오(PDF) 요청하기</a>
+        <div style="text-align: center; margin-top: 2rem;">
+            <a href="#contact" class="cta-primary">📎 성공 사례 포트폴리오(PDF) 요청하기</a>
         </div>
     </section>
 
-    <!-- Final CTA -->
-    <section class="final-cta">
-        <h2>이제 막연한 화합이 아닌,<br>실질적인 성과 중심의 세대 협력으로 나아가세요.</h2>
-        <p>전문 퍼실리테이션 기반의 협력 시스템으로<br>
-        세대 차이를 '경쟁력'으로 바꾸는 첫걸음을 시작하십시오.</p>
-        <a href="#contact" class="cta-button">🚀 지금 바로 맞춤형 프로젝트 컨설팅 신청하기</a>
+    <!-- Beta Test CTA -->
+    <section id="apply" class="beta">
+        <h2>📣 베타 테스트 특별 공고</h2>
+        <div class="beta-highlight">
+            <h3>선착순 3개 기업 무료 모집</h3>
+            <p style="font-size: 1.2rem; margin: 1rem 0;">프로젝트 전 과정 무료 지원</p>
+            <div>
+                <span class="badge">무료 진단 컨설팅</span>
+                <span class="badge">퍼실리테이터 지원</span>
+                <span class="badge">프로젝트 전 과정 무료</span>
+            </div>
+            <p style="margin-top: 1.5rem; color: #e74c3c; font-weight: bold;">⚠️ 조기 마감될 수 있습니다</p>
+        </div>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSd0FB2TRwAk0RHLJoFGBimL0emCjty9i6R-a-j_5O5LaCpPUw/viewform?usp=dialog" target="_blank" class="cta-primary" style="font-size: 1.3rem; padding: 1.5rem 3rem;">
+            🌟 귀사 맞춤형 세대 융합 프로젝트 상담 신청하기
+        </a>
+        <p style="margin-top: 2rem; font-size: 1.1rem;">
+            * 베타 테스트 종료 후, 정식 프로젝트 비용은 상담을 통해 맞춤형으로 결정됩니다.
+        </p>
     </section>
 
     <!-- Footer -->
     <footer id="contact">
         <div class="footer-content">
-            <h3>G-LinK Project</h3>
-            <div class="contact-info">
-                <div class="contact-item">
-                    <strong>📍 주소</strong>
-                    경상남도 창원시 성산구 대정로 73
-                </div>
-                <div class="contact-item">
-                    <strong>📧 이메일</strong>
-                    sangyoun0508@gmail.com
-                </div>
-                <div class="contact-item">
-                    <strong>📞 문의</strong>
-                    010-8475-4029
-                </div>
+            <h3 style="color: #1DE9B6; margin-bottom: 1rem;">G-Link-Project</h3>
+            <div class="footer-info">
+                <p>📍 경상남도 창원시 성산구 대정로 73</p>
+                <p>📧 sangyoun0508@gmail.com</p>
             </div>
-            <div class="social-links">
-                <a href="#">LinkedIn</a> | 
-                <a href="#">Instagram</a> | 
-                <a href="#">YouTube</a>
+            <div class="footer-social">
+                <a href="https://www.instagram.com/" target="_blank" title="Instagram">📸 Instagram</a>
+                <a href="https://www.youtube.com/" target="_blank" title="YouTube">▶️ YouTube</a>
+                <a href="https://pf.kakao.com/" target="_blank" title="KakaoTalk">💬 KakaoTalk</a>
             </div>
-            <p class="copyright">© 2025 G-LinK Project. All rights reserved.</p>
+            <p style="margin-top: 2rem; opacity: 0.7;">
+                Connect, Activate, Achieve - 연결, 활성화, 달성
+            </p>
+            <p style="opacity: 0.7;">
+                © 2025 세대 융합 시너지. All rights reserved.
+            </p>
         </div>
     </footer>
-
-    <script>
-        // Smooth scrolling
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
-            });
-        });
-
-        // Scroll animation
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -100px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.step, .benefit-card, .story-card, .checklist-item').forEach(el => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(20px)';
-            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-            observer.observe(el);
-        });
-
-        // Mobile menu toggle
-        document.querySelector('.mobile-menu').addEventListener('click', function() {
-            const nav = document.querySelector('nav');
-            if (nav.style.display === 'flex') {
-                nav.style.display = 'none';
-            } else {
-                nav.style.display = 'flex';
-                nav.style.flexDirection = 'column';
-                nav.style.position = 'absolute';
-                nav.style.top = '60px';
-                nav.style.right = '5%';
-                nav.style.background = '#0A1931';
-                nav.style.padding = '1rem';
-                nav.style.borderRadius = '10px';
-            }
-        });
-    </script>
 </body>
 </html>
